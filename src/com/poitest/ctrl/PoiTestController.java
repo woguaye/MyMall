@@ -17,7 +17,7 @@ public class PoiTestController extends HttpServlet {
 	 */
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		String username = req.getParameter("username"); 
+		String username = req.getParameter("username"); //1
 		String password = req.getParameter("password");
 		if (ComFunc.checkNullOrEmpty(username)
 				|| ComFunc.checkNullOrEmpty(password)) {
