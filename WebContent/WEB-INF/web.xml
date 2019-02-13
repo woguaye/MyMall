@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>POI-web-test</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>test01</servlet-name>
+		<!-- 指定servlet的类路径 -->
+		<servlet-class>com.poitest.ctrl.PoiTestController</servlet-class>
+		<!-- 可以添加需要初始化的参数 -->
+		<init-param>
+			<param-name>arg0</param-name>
+			<param-value>123</param-value>
+		</init-param>
+	</servlet>
+	<!-- servlet的指定拦截请求 -->
+	<servlet-mapping>
+		<servlet-name>test01</servlet-name>
+		<url-pattern>/test01</url-pattern>
+	</servlet-mapping>
+</web-app>
