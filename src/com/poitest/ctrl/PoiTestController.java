@@ -32,6 +32,8 @@ public class PoiTestController extends HttpServlet {
 			if(username.equals(user)){
 				
 				resp.getWriter().println("welcome");
+			}else{
+				resp.getWriter().println("sorry is worry");
 			}
 		}
 	}
